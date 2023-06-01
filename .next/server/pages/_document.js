@@ -26,6 +26,7 @@ var next_document = __webpack_require__(859);
 function Document() {
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(next_document.Html, {
         lang: "en",
+        "data-theme": "light",
         children: [
             /*#__PURE__*/ jsx_runtime.jsx(next_document.Head, {}),
             /*#__PURE__*/ (0,jsx_runtime.jsxs)("body", {

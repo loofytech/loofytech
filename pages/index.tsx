@@ -1,118 +1,142 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
+  return <div className="mx-20 my-12">
+    <div className="flex items-center gap-1">
+      <div className="w-1/2 flex flex-col">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={"/images/logo.svg"}
+          width={91}
+          height={68}
+          alt="logo"
+        />
+        <h1 className="text-4.5xl leading-11 font-bold linear-blue-pink mt-5">Providing Industry Leading Solutions for</h1>
+        <p className="text-xl text-black mt-12">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant cras morbi hendrerit nunc vel sapien. In habitasse at diam suspendisse non vitae fermentum, pharetra arcu. Viverra a morbi ut donec in.
+        </p>
+      </div>
+      <div className="w-1/2">
+        <Image
+          src={"/images/heading.svg"}
+          width={0}
+          height={0}
+          className="w-full h-full"
+          alt="heading illustration"
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    </div>
+    <div className="h-96 bg-blue-100 rounded-full mt-16 p-6">
+      <div className="flex items-center h-full">
+        <div className="w-80 h-full bg-white rounded-l-full flex items-center justify-center border-r-4 border-blue-200">
+          <h2 className="text-3.5xl leading-10.5 w-1/2 font-bold text-primary">About Company</h2>
+        </div>
+        <div className="flex-1 h-full flex items-center justify-center">
+          <div className="w-3/4 text-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget duis mi nunc bibendum. Tellus elementum nec lorem eget dictumst. Risus in gravida eu, enim lorem. Sed consequat ut suspendisse eros. Nunc nunc accumsan, viverra enim. Mi.
+          </div>
+        </div>
       </div>
-    </main>
-  )
+    </div>
+    {/* services */}
+    <div className="mt-20">
+      <h3 className="text-center text-4xl font-bold text-primary mb-14">Our Services</h3>
+      <div className="flex flex-col gap-12">
+        <div className="h-96 flex items-center bg-fuchsia-100 rounded-r-full px-28">
+          <div className="flex-1">
+            <div className="w-3/4">
+              <h2 className="text-primary text-2xl font-bold">Non-IT enterprises</h2>
+              <p className="text-xl mt-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat bibendum sit felis, sollicitudin et. Nulla aliquet integer hac ac morbi.
+              </p>
+            </div>
+          </div>
+          <div className="h-full flex items-center">
+            <Image
+              src={"/images/service-1.svg"}
+              width={374}
+              height={305}
+              alt="service one"
+            />
+          </div>
+        </div>
+        <div className="h-96 flex items-center bg-blue-100 rounded-l-full px-28">
+          <div className="h-full flex items-center">
+            <Image
+              src={"/images/service-2.svg"}
+              width={374}
+              height={275}
+              alt="service two"
+            />
+          </div>
+          <div className="flex-1">
+            <div className="w-3/4 mx-auto">
+              <h2 className="text-primary text-2xl font-bold">Software product companies</h2>
+              <p className="text-xl mt-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* services map */}
+    <div className="mt-20">
+      <h3 className="text-center text-4xl font-bold text-primary mb-14">Service Map</h3>
+      <div className="flex flex-col gap-12">
+        <div className="h-96 flex items-center bg-gray-100 p-28">
+          <div className="w-96">
+            <h2 className="text-primary text-2xl font-bold">IT consulting</h2>
+          </div>
+          <div className="w-full">
+            <ul className="list-disc">
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="h-96 flex items-center bg-gray-100 p-28">
+          <div className="w-96">
+            <div className="w-1/2">
+              <h2 className="text-primary text-2xl font-bold">Software Development</h2>
+            </div>
+          </div>
+          <div className="w-full">
+            <ul className="list-disc">
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="h-96 flex items-center bg-gray-100 p-28">
+          <div className="w-96">
+            <h2 className="text-primary text-2xl font-bold">Testing and QA</h2>
+          </div>
+          <div className="w-full">
+            <ul className="list-disc">
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+              <li className="text-xl leading-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>;
 }

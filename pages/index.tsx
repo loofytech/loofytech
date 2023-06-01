@@ -1,6 +1,92 @@
+import { useState } from "react";
 import Image from "next/image";
+import { toastSuccess } from "@/plugins/toast";
+import { validEmail, validText } from "@/utils/validations";
 
 export default function Home() {
+  const [send, setSend] = useState<boolean>(false);
+  const [stepSend, setStepSend] = useState<number>(0);
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [validation, setValidation] = useState<any>({
+    name: false,
+    email: false,
+    phone: true,
+    message: false
+  });
+
+  const handleSendMessage = async () => {
+    setSend(true);
+    try {
+      const http = await fetch("/api/mail", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          message: message
+        })
+      });
+      const data = await http.json();
+
+      toastSuccess(data.message);
+      setStepSend(1);
+      setSend(false);
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      setTimeout(() => {
+        setStepSend(0);
+      }, 3000);
+    } catch (error) {
+      setSend(false);
+      console.log(error);
+    }
+  }
+
+  const handleName = (evt: any) => {
+    const ems = validText(evt.target.value);
+    if (ems) {
+      setValidation({...validation, name: true});
+      setName(evt.target.value);
+    } else {
+      setValidation({...validation, name: false});
+      evt.preventDefault();
+    }
+    if (evt.target.value == "") {
+      setValidation({...validation, name: false});
+    }
+  }
+
+  const handleEmail = (evt: any) => {
+    const ems = validEmail(evt.target.value);
+    if (ems) {
+      setValidation({...validation, email: true});
+    } else {
+      setValidation({...validation, email: false});
+    }
+    if (evt.target.value == "") {
+      setValidation({...validation, email: false});
+    }
+    setEmail(evt.target.value);
+  }
+
+  const handleMessage = (evt: any) => {
+    const ems = validText(evt.target.value);
+    if (ems) {
+      setValidation({...validation, message: true});
+      setMessage(evt.target.value);
+    } else {
+      evt.preventDefault();
+    }
+    if (evt.target.value == "") {
+      setValidation({...validation, message: false});
+    }
+  }
+
   return <div className="mx-20 my-12">
     <div className="flex items-center gap-1">
       <div className="w-1/2 flex flex-col">
@@ -143,12 +229,52 @@ export default function Home() {
       <div className="bg-blue-100 py-28">
         <h3 className="text-center text-4xl font-bold text-primary mb-10">Contact Us</h3>
         <div className="flex flex-col gap-3 w-1/3 mx-auto">
-          <input type="text" autoComplete="off" className="py-2 px-3 text-sm rounded-md border" placeholder="Full Name" />
-          <input type="text" autoComplete="off" className="py-2 px-3 text-sm rounded-md border" placeholder="Email Address" />
-          <input type="text" autoComplete="off" className="py-2 px-3 text-sm rounded-md border" placeholder="Phone Number" />
-          <textarea autoComplete="off" className="py-2 px-3 text-sm rounded-md border h-24" placeholder="Message" />
+          <input
+            type="text"
+            autoComplete="off"
+            className="py-2 px-3 text-sm rounded-md border"
+            placeholder="Full Name"
+            onChange={(e) => handleName(e)}
+            value={name}
+          />
+          <input
+            type="text"
+            autoComplete="off"
+            className="py-2 px-3 text-sm rounded-md border"
+            placeholder="Email Address"
+            onChange={(e) => handleEmail(e)}
+            value={email}
+          />
+          <input
+            type="text"
+            autoComplete="off"
+            className="py-2 px-3 text-sm rounded-md border"
+            placeholder="Phone Number"
+            onChange={(e) => setPhone(e.target.value)}
+            value={phone}
+          />
+          <textarea
+            autoComplete="off"
+            className="py-2 px-3 text-sm rounded-md border h-24"
+            placeholder="Message"
+            onChange={(e) => handleMessage(e)}
+            value={message}
+          />
           <div className="text-center mt-4">
-            <button className="text-sm bg-primary text-white font-bold py-3 px-10 rounded-md">Send</button>
+            <button
+              className={`text-sm text-white font-bold py-3 w-40 rounded-md ${send || stepSend > 0 ? "bg-blue-400" : "bg-primary"}`}
+              onClick={handleSendMessage}
+              disabled={send || !validation.name || !validation.email || !validation.phone || !validation.message}
+            >
+              {send ? <div className="flex justify-center items-center gap-3">
+                <div className="relative" style={{top: "-4px", left: "-10px"}}>
+                  <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+                </div>
+                Process
+              </div> : <div>
+                {stepSend > 0 ? "Sent" : "Send"}
+              </div>}
+            </button>
           </div>
         </div>
       </div>

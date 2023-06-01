@@ -138,5 +138,36 @@ export default function Home() {
         </div>
       </div>
     </div>
+    {/* contact */}
+    <div className="mt-20 relative">
+      <div className="bg-blue-100 py-28">
+        <h3 className="text-center text-4xl font-bold text-primary mb-10">Contact Us</h3>
+        <div className="flex flex-col gap-3 w-1/3 mx-auto">
+          <input type="text" autoComplete="off" className="py-2 px-3 text-sm rounded-md border" placeholder="Full Name" />
+          <input type="text" autoComplete="off" className="py-2 px-3 text-sm rounded-md border" placeholder="Email Address" />
+          <input type="text" autoComplete="off" className="py-2 px-3 text-sm rounded-md border" placeholder="Phone Number" />
+          <textarea autoComplete="off" className="py-2 px-3 text-sm rounded-md border h-24" placeholder="Message" />
+          <div className="text-center mt-4">
+            <button className="text-sm bg-primary text-white font-bold py-3 px-10 rounded-md">Send</button>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-0">
+        <Image
+          src={"/images/bubble.svg"}
+          width={282}
+          height={282}
+          alt=""
+        />
+      </div>
+      <div className="absolute bottom-0 right-0 rotate-180">
+        <Image
+          src={"/images/bubble.svg"}
+          width={282}
+          height={282}
+          alt=""
+        />
+      </div>
+    </div>
   </div>;
 }

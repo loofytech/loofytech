@@ -26,6 +26,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+input,
+button,
+textarea {
+  outline: none !important;
+}
+
+textarea {
+  resize: none;
+}
+
 .linear-blue-pink {
   background: linear-gradient(90.79deg, #0048FF 3.42%, #D6008D 82.66%);
   -webkit-background-clip: text;

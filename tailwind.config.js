@@ -23,6 +23,13 @@ module.exports = {
       lineHeight: {
         '10.5': '45.8px',
         '11': '56px'
+      },
+      width: {
+        '374': '374px'
+      },
+      height: {
+        '305': '305px',
+        '275': '275px'
       }
     },
   },

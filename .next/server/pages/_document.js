@@ -4,7 +4,7 @@ exports.id = 660;
 exports.ids = [660];
 exports.modules = {
 
-/***/ 330:
+/***/ 6330:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17,9 +17,9 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(893);
+var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./node_modules/next/document.js
-var next_document = __webpack_require__(859);
+var next_document = __webpack_require__(6859);
 ;// CONCATENATED MODULE: ./pages/_document.tsx
 
 
@@ -48,7 +48,7 @@ function Document() {
 
 /***/ }),
 
-/***/ 940:
+/***/ 2940:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -83,12 +83,12 @@ _export(exports, {
         return Document;
     }
 });
-const _react = /*#__PURE__*/ _interop_require_wildcard(__webpack_require__(689));
-const _constants = __webpack_require__(724);
-const _getpagefiles = __webpack_require__(140);
-const _htmlescape = __webpack_require__(716);
+const _react = /*#__PURE__*/ _interop_require_wildcard(__webpack_require__(6689));
+const _constants = __webpack_require__(6724);
+const _getpagefiles = __webpack_require__(4140);
+const _htmlescape = __webpack_require__(9716);
 const _iserror = /*#__PURE__*/ _interop_require_default(__webpack_require__(676));
-const _htmlcontext = __webpack_require__(743);
+const _htmlcontext = __webpack_require__(8743);
 function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -595,7 +595,7 @@ class Head extends _react.default.Component {
             content: "width=device-width,minimum-scale=1,initial-scale=1"
         }), !hasCanonicalRel && /*#__PURE__*/ _react.default.createElement("link", {
             rel: "canonical",
-            href: canonicalBase + (__webpack_require__(368).cleanAmpPath)(dangerousAsPath)
+            href: canonicalBase + (__webpack_require__(6368).cleanAmpPath)(dangerousAsPath)
         }), /*#__PURE__*/ _react.default.createElement("link", {
             rel: "preload",
             as: "script",
@@ -696,7 +696,7 @@ class NextScript extends _react.default.Component {
                 return (0, _htmlescape.htmlEscapeJsonString)(data);
             }
             const bytes =  false ? 0 : Buffer.from(data).byteLength;
-            const prettyBytes = (__webpack_require__(955)/* ["default"] */ .Z);
+            const prettyBytes = (__webpack_require__(5955)/* ["default"] */ .Z);
             if (largePageDataBytes && bytes > largePageDataBytes) {
                 if (true) {
                     largePageDataWarnings.add(__NEXT_DATA__.page);
@@ -820,7 +820,7 @@ _export(exports, {
         return getProperError;
     }
 });
-const _isplainobject = __webpack_require__(524);
+const _isplainobject = __webpack_require__(8524);
 function isError(err) {
     return typeof err === "object" && err !== null && "name" in err && "message" in err;
 }
@@ -836,7 +836,7 @@ function getProperError(err) {
 
 /***/ }),
 
-/***/ 955:
+/***/ 5955:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -914,15 +914,15 @@ function prettyBytes(number, options) {
 
 /***/ }),
 
-/***/ 859:
+/***/ 6859:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__(940)
+module.exports = __webpack_require__(2940)
 
 
 /***/ }),
 
-/***/ 140:
+/***/ 4140:
 /***/ ((module) => {
 
 "use strict";
@@ -930,7 +930,7 @@ module.exports = require("next/dist/server/get-page-files.js");
 
 /***/ }),
 
-/***/ 716:
+/***/ 9716:
 /***/ ((module) => {
 
 "use strict";
@@ -938,7 +938,7 @@ module.exports = require("next/dist/server/htmlescape.js");
 
 /***/ }),
 
-/***/ 368:
+/***/ 6368:
 /***/ ((module) => {
 
 "use strict";
@@ -946,7 +946,7 @@ module.exports = require("next/dist/server/utils.js");
 
 /***/ }),
 
-/***/ 724:
+/***/ 6724:
 /***/ ((module) => {
 
 "use strict";
@@ -954,7 +954,7 @@ module.exports = require("next/dist/shared/lib/constants.js");
 
 /***/ }),
 
-/***/ 743:
+/***/ 8743:
 /***/ ((module) => {
 
 "use strict";
@@ -962,7 +962,7 @@ module.exports = require("next/dist/shared/lib/html-context.js");
 
 /***/ }),
 
-/***/ 524:
+/***/ 8524:
 /***/ ((module) => {
 
 "use strict";
@@ -970,7 +970,7 @@ module.exports = require("next/dist/shared/lib/is-plain-object.js");
 
 /***/ }),
 
-/***/ 689:
+/***/ 6689:
 /***/ ((module) => {
 
 "use strict";
@@ -985,7 +985,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893], () => (__webpack_exec__(330)));
+var __webpack_exports__ = __webpack_require__.X(0, [893], () => (__webpack_exec__(6330)));
 module.exports = __webpack_exports__;
 
 })();

@@ -95,22 +95,22 @@ export default function Home() {
       canonical="https://loofytech.com/"
       openGraph={{
         title: "Loofytech | Providing Industry Leading Solutions for",
-        description: `Together we create a system that supports the productivity of your company's employees`,
+        description: "Together we create a system that supports the productivity of your company's employees",
         url: "https://loofytech.com/",
         images: [
-          {url: `https://loofytech.com/images/heading.png`}
+          {url: "https://loofytech.com/images/heading.png"}
         ],
         siteName: "Loofytech | Providing Industry Leading Solutions for"
       }}
       additionalMetaTags={[{
-        property: 'keywords',
-        content: 'consultant it, system management, freelancer, group it, individual it, system integrations'
+        property: "keywords",
+        content: "consultant it, system management, freelancer, group it, individual it, system integrations"
       }, {
-        name: 'application-name',
-        content: 'Loofytech | Providing Industry Leading Solutions for'
+        name: "application-name",
+        content: "Loofytech | Providing Industry Leading Solutions for"
       }, {
-        httpEquiv: 'x-ua-compatible',
-        content: 'IE=edge; chrome=1'
+        httpEquiv: "x-ua-compatible",
+        content: "IE=edge; chrome=1"
       }]}
     />
     <div className="mx-5 my-5 md:mx-20 md:my-12">

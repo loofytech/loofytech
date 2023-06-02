@@ -3,7 +3,7 @@ exports.id = 636;
 exports.ids = [636];
 exports.modules = {
 
-/***/ 636:
+/***/ 2636:
 /***/ ((module, exports, __webpack_require__) => {
 
 /* __next_internal_client_entry_do_not_use__  cjs */ 
@@ -26,12 +26,12 @@ _export(exports, {
     }
 });
 const _interop_require_default = __webpack_require__(167);
-const _interop_require_wildcard = __webpack_require__(760);
-const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(689));
-const _sideeffect = /*#__PURE__*/ _interop_require_default._(__webpack_require__(470));
-const _ampcontext = __webpack_require__(918);
-const _headmanagercontext = __webpack_require__(796);
-const _ampmode = __webpack_require__(732);
+const _interop_require_wildcard = __webpack_require__(8760);
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(6689));
+const _sideeffect = /*#__PURE__*/ _interop_require_default._(__webpack_require__(2470));
+const _ampcontext = __webpack_require__(3918);
+const _headmanagercontext = __webpack_require__(2796);
+const _ampmode = __webpack_require__(5732);
 const _warnonce = __webpack_require__(618);
 function defaultHead(inAmpMode) {
     if (inAmpMode === void 0) inAmpMode = false;
@@ -177,64 +177,6 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     Object.assign(exports.default, exports);
     module.exports = exports.default;
 } //# sourceMappingURL=head.js.map
-
-
-/***/ }),
-
-/***/ 167:
-/***/ ((__unused_webpack_module, exports) => {
-
-
-
-exports._ = exports._interop_require_default = _interop_require_default;
-function _interop_require_default(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
-
-
-/***/ }),
-
-/***/ 760:
-/***/ ((__unused_webpack_module, exports) => {
-
-
-
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-
-    return (_getRequireWildcardCache = function(nodeInterop) {
-        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-exports._ = exports._interop_require_wildcard = _interop_require_wildcard;
-function _interop_require_wildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return { default: obj };
-
-    var cache = _getRequireWildcardCache(nodeInterop);
-
-    if (cache && cache.has(obj)) return cache.get(obj);
-
-    var newObj = {};
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-    for (var key in obj) {
-        if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-            var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-            if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-            else newObj[key] = obj[key];
-        }
-    }
-
-    newObj.default = obj;
-
-    if (cache) cache.set(obj, newObj);
-
-    return newObj;
-}
 
 
 /***/ })

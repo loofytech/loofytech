@@ -5,7 +5,7 @@ exports.id = 70;
 exports.ids = [70];
 exports.modules = {
 
-/***/ 616:
+/***/ 5616:
 /***/ ((module) => {
 
 module.exports = import("next-connect");;
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(616);
-/* harmony import */ var _utils_apiHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(395);
-/* harmony import */ var _plugins_nodemailer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(752);
+/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5616);
+/* harmony import */ var _utils_apiHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2395);
+/* harmony import */ var _plugins_nodemailer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6752);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([next_connect__WEBPACK_IMPORTED_MODULE_0__]);
 next_connect__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -51,7 +51,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 752:
+/***/ 6752:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -121,7 +121,7 @@ const sendMain = async (name, email, phone, text)=>{
 
 /***/ }),
 
-/***/ 395:
+/***/ 2395:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {

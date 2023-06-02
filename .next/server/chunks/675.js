@@ -2,7 +2,7 @@ exports.id = 675;
 exports.ids = [675];
 exports.modules = {
 
-/***/ 740:
+/***/ 3740:
 /***/ ((module, exports, __webpack_require__) => {
 
 "use strict";
@@ -17,14 +17,14 @@ Object.defineProperty(exports, "default", ({
     }
 }));
 const _interop_require_default = __webpack_require__(167);
-const _interop_require_wildcard = __webpack_require__(760);
-const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(689));
-const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(636));
-const _imageblursvg = __webpack_require__(486);
-const _imageconfig = __webpack_require__(843);
+const _interop_require_wildcard = __webpack_require__(8760);
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(6689));
+const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(2636));
+const _imageblursvg = __webpack_require__(4486);
+const _imageconfig = __webpack_require__(5843);
 const _imageconfigcontext = __webpack_require__(744);
 const _warnonce = __webpack_require__(618);
-const _imageloader = /*#__PURE__*/ _interop_require_default._(__webpack_require__(552));
+const _imageloader = /*#__PURE__*/ _interop_require_default._(__webpack_require__(9552));
 const configEnv = {"deviceSizes":[640,750,828,1080,1200,1920,2048,3840],"imageSizes":[16,32,48,64,96,128,256,384],"path":"/_next/image","loader":"default","dangerouslyAllowSVG":true,"unoptimized":false};
 const allImgs = new Map();
 let perfObserver;
@@ -499,10 +499,10 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 
 /***/ }),
 
-/***/ 675:
+/***/ 5675:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__(740)
+module.exports = __webpack_require__(3740)
 
 
 /***/ })

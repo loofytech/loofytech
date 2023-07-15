@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import { useDispatch } from "react-redux";
+import { setPageOne, setPageTwo } from "@/store/reducers/pageReducer";
 
 export default function ContentOne() {
   const [processing, setProcessing] = useState<boolean>(true);
-  const [pageTwo, setPageTwo] = useState<boolean>(false);
+  const dispatch = useDispatch();
 
   const container = {
     // hidden: { left: "-100%" },
@@ -19,7 +21,7 @@ export default function ContentOne() {
   }
 
   const handleTabLogo = () => {
-    setPageTwo(!pageTwo);
+    dispatch(setPageTwo(true));
   }
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function ContentOne() {
   }, []);
 
   return (<>
-    <div className="flex flex-col items-center justify-center h-screen overflow-hidden">
+    <div className="absolute flex w-full flex-col items-center justify-center h-screen overflow-hidden">
       <div className="w-28 h-28 shadow-lg bg-black border-2 relative border-primary flex items-center justify-center rounded-full">
         <Image
           src={"/logo-2-small.png"}
@@ -73,7 +75,7 @@ export default function ContentOne() {
           hidden: {x: 150, y: 220, opacity: 0},
           visible: {x: 150, y: 200, opacity: 1}
         }}
-        style={{zIndex: 2}}
+        style={{zIndex: 1}}
         className="text-white tagline text-8xl font-semibold relative"
       >
         <span className="text-primary">M</span>agical & measurable
@@ -83,7 +85,7 @@ export default function ContentOne() {
           hidden: {x: 150, y: 220, opacity: 0},
           visible: {x: 150, y: 200, opacity: 1}
         }}
-        style={{zIndex: 2}}
+        style={{zIndex: 1}}
         className="text-white tagline text-8xl font-semibold relative"
       >
         <span className="text-primary">S</span>hared immersive
@@ -93,7 +95,7 @@ export default function ContentOne() {
           hidden: {x: 150, y: 220, opacity: 0},
           visible: {x: 150, y: 200, opacity: 1}
         }}
-        style={{zIndex: 2}}
+        style={{zIndex: 1}}
         className="text-white tagline text-8xl font-semibold relative"
       >
         <span className="text-primary">E</span>xperiences

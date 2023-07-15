@@ -1,6 +1,6 @@
-import { Inter } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Bebas_Neue({ subsets: ['latin'], weight: "400" });
 
 interface LProps {
   children: React.ReactNode;

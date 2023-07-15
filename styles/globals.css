@@ -43,3 +43,37 @@ textarea {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.wrapper-one {
+  position: absolute;
+  background: transparent;
+  top: 0;
+}
+
+.tagline {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.cls-1, .cls-2 {
+  fill: #fff;
+}
+
+.cls-3 {
+  fill: #0276ef;
+  stroke: #fff;
+}
+
+.cls-3, .cls-2 {
+  stroke-miterlimit: 10;
+  stroke-width: 70px;
+}
+
+.cls-2 {
+  stroke: #0276ef;
+}
+
+.cls-3 {
+  animation: line-anim 1.2s ease forwards infinite !important;
+}

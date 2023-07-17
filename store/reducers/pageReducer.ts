@@ -4,7 +4,8 @@ const pageReducer = createSlice({
   name: "pageReducer",
   initialState: {
     PAGE_ONE: true,
-    PAGE_TWO: false
+    PAGE_TWO: false,
+    PAGE_THREE: false
   },
   reducers: {
     setPageOne: (state, param) => {
@@ -12,10 +13,13 @@ const pageReducer = createSlice({
     },
     setPageTwo: (state, param) => {
       state.PAGE_TWO = param.payload;
+    },
+    setPageThree: (state, param) => {
+      state.PAGE_THREE = param.payload;
     }
   }
 });
 
-export const {setPageOne, setPageTwo} = pageReducer.actions;
+export const {setPageOne, setPageTwo, setPageThree} = pageReducer.actions;
 
 export default pageReducer.reducer;

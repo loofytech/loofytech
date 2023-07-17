@@ -6,9 +6,10 @@ import { NextSeo } from "next-seo";
 import ContentOne from "@/components/ContentOne";
 import ContentTwo from "@/components/ContentTwo";
 import { useSelector } from "react-redux";
+import ContentThree from "@/components/ContentThree";
 
 export default function Home() {
-  const [loading, setLoading] = useState<boolean>(true);
+  // const [loading, setLoading] = useState<boolean>(true);
   const [send, setSend] = useState<boolean>(false);
   const [stepSend, setStepSend] = useState<number>(0);
   const [name, setName] = useState<string>("");
@@ -22,11 +23,11 @@ export default function Home() {
     message: false
   });
 
-  const {PAGE_ONE, PAGE_TWO} = useSelector((state: any) => state.page);
+  const {PAGE_ONE, PAGE_TWO, PAGE_THREE} = useSelector((state: any) => state.page);
 
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(false);
+  // }, []);
 
   const handleSendMessage = async () => {
     setSend(true);
@@ -125,5 +126,6 @@ export default function Home() {
     />
     {PAGE_ONE && <ContentOne />}
     {PAGE_TWO && <ContentTwo />}
+    {PAGE_THREE && <ContentThree />}
   </>;
 }

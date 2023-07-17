@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
+import { FaArrowRightLong, FaStar } from "react-icons/fa6";
+import Image from "next/image";
+import { setPageOne, setPageTwo, setPageThree } from "@/store/reducers/pageReducer";
+import { useDispatch } from "react-redux";
 
 export default function ContentTwo() {
+  const dispatch = useDispatch();
+
   const container = {
     visible: {
       transition: {
@@ -8,6 +14,10 @@ export default function ContentTwo() {
         staggerChildren: 0.2
       }
     }
+  }
+
+  const handleShowReel = () => {
+    dispatch(setPageThree(true));
   }
 
   return (<>
@@ -23,16 +33,14 @@ export default function ContentTwo() {
               className="w-full h-full bg-white absolute"
               variants={{
                 hidden: {
-                  top: "-100%",
                   right: "-100%"
                 },
                 visible: {
-                  top: 0,
                   right: 0
                 }
               }}
               transition={{
-                delay: 0 + i / 10,
+                delay: 0.5,
                 ease: "easeInOut"
               }}
             />
@@ -49,7 +57,7 @@ export default function ContentTwo() {
             }
           }}
           transition={{
-            delay: 0.8
+            delay: 0.5
           }}
         >
           We believe in breaking boundaries. Everything we do
@@ -75,14 +83,14 @@ export default function ContentTwo() {
                 }
               }}
               transition={{
-                delay: 0 + i / 10,
+                delay: 0.5,
                 ease: "easeIn"
               }}
             />
           </motion.div>
         })]}
         <motion.div
-          className="absolute top-0 left-28 w-2/3 tagline text-5xl text-white"
+          className="absolute top-0 left-28 w-2/3 tagline text-5xl text-white flex"
           variants={{
             hidden: {
               top: "-30%"
@@ -95,8 +103,21 @@ export default function ContentTwo() {
             delay: 0.8
           }}
         >
-          blends bold creativity with cutting-edge technology to craft experiences that people talk about, long after the lights go out.
+          <div className="c2-tag-bottom">
+            blends bold creativity with cutting-edge technology to craft experiences that people talk about, long after the lights go out.
+            <button className="c2-button" onClick={handleShowReel}>
+              <span>View our showreel</span>
+              <FaArrowRightLong className="c2-button-arrow" size={18} />
+            </button>
+          </div>
         </motion.div>
+      </motion.div>
+      <motion.div className="absolute bottom-10 right-14">
+        <div className="absolute w-full h-full flex items-center justify-center" style={{zIndex: 2}}>
+          {/* <FaStar size={18} className="text-white" /> */}
+          <Image src={"/logo-2-svg.svg"} width={30} height={30} alt="" />
+        </div>
+        <FaStar size={98} className="spin-star text-primary" />
       </motion.div>
     </div>
   </>);
